@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-50: #f3f7ff;
+  --brand-500: #4f77ff;
+  --brand-700: #2a46af;
+  --ink: #10192f;
+  --muted: #5b6485;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --border: #e6ebf7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #eef4ff 0%, #f8fafc 100%);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.mobile-card {
+  @apply rounded-2xl border border-slate-200 bg-white shadow-soft;
+}
+
+.soft-btn {
+  @apply inline-flex items-center justify-center rounded-xl px-4 py-2.5 font-semibold transition-colors duration-200;
+}
+
+.primary-btn {
+  @apply soft-btn bg-brand-600 text-white hover:bg-brand-700;
+}
+
+.secondary-btn {
+  @apply soft-btn border border-brand-200 bg-brand-50 text-brand-700 hover:bg-brand-100;
+}
+
+.grid-hero {
+  background-image: radial-gradient(circle at top left, rgba(79, 119, 255, 0.18), transparent 35%), linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+}
+
+.chip {
+  @apply inline-flex items-center rounded-full border border-brand-200 bg-brand-50 px-2.5 py-1 text-xs font-medium text-brand-700;
+}
+
+.section-label {
+  @apply text-xs font-semibold uppercase tracking-[0.18em] text-brand-700;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
